@@ -1,18 +1,34 @@
 package architect;
 
 public class BtreBSTree_Common_func {
-	public static int solve(int arr[]) {
 
-		return 0;
+	public static void inorderTraversal(TreeNode root) {
+		if (root == null)
+			return;
+		inorderTraversal(root.left);
+		System.out.print(root.val + " ");
+		inorderTraversal(root.right);
 	}
 
-	public static void main(String args[]) {
-		Scanner sc = new Scanner(System.in);
-		int n = sc.nextInt();
-		int arr[] = new int[n];
-		for (int i = 0; i < n; i++)
-			arr[i] = sc.nextInt();
-
-		System.out.println(solve(arr));
+	public static void preorderTraversal(TreeNode root) {
+		if (root == null)
+			return;
+		System.out.print(root.val + " ");
+		preorderTraversal(root.left);
+		preorderTraversal(root.right);
 	}
+
+	public static void postorderTraversal(TreeNode root) {
+		if (root == null)
+			return;
+		postorderTraversal(root.left);
+		postorderTraversal(root.right);
+		System.out.print(root.val + " ");
+	}
+	
+	public static TreeNode inorderSuccessor(TreeNode root){
+		
+		return null;
+	}
+	
 }
