@@ -30,32 +30,35 @@ public class BST_basic_function {
 		if (root == null)
 			return root;
 
-		if (root.val > key){
+		if (root.val > key) {
 			root.left = delete(root.left, key);
 			return root;
 		}
-		
-		if (root.val < key){
+
+		if (root.val < key) {
 			root.right = delete(root.right, key);
 			return root;
-		}
-		else {
+		} else {
 			if (root.right == null)
 				return root.left;
 			else if (root.left == null)
 				return root.right;
 			else {
 
-				TreeNode succParent=root.right;
-				TreeNode succ=root.right;
-				while(succ.left!=null)
-				{
-					succParent=succ;
-					succ=succ.left;
+				TreeNode succParent = root.right;
+				TreeNode succ = root.right;
+				if (succ.right == null && succ.left == null) {
+					root.val = succ.val;
+					root.right = null;
+				} else {
+					while (succ.left != null) {
+						succParent = succ;
+						succ = succ.left;
+					}
+					succParent.left = succ.right;
+					root.val = succ.val;
+					
 				}
-				succParent.left=succ.right;
-				root.val=succ.val;
-				
 				return root;
 			}
 
