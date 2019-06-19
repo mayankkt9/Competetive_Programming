@@ -96,7 +96,7 @@ public class Run_all_architect_function {
 		//TreeNode root3 = deleteBSTtree();
 		//BTreePrinter.printNode(root3);
 		
-		TreeNode root4 = leetCodeInput("[1,2,3]");
+		TreeNode root4 = leetCodeInput("[1,null,2,3]");
 		BTreePrinter.printNode(root4);
 		
 		

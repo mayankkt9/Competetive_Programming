@@ -14,8 +14,8 @@ public class Example_Tree_Input {
 
 		return root;
 	}
-	
-	public static TreeNode bstTree(){
+
+	public static TreeNode bstTree() {
 		TreeNode root = new TreeNode(20);
 		BST_basic_function.insert(root, 10);
 		BST_basic_function.insert(root, 30);
@@ -31,22 +31,26 @@ public class Example_Tree_Input {
 		BST_basic_function.insert(root, 27);
 		BST_basic_function.insert(root, 33);
 		BST_basic_function.insert(root, 37);
-		
+
 		return root;
 	}
-	
-	public static TreeNode leetCodeInputTree(String str)
-	{
-		str=str.substring(1,str.length()-1);
+
+	public static TreeNode leetCodeInputTree(String str) {
+		str = str.substring(1, str.length() - 1);
 		System.out.println(str);
-		
-		String arr[]=str.split(",");
+
+		String arr[] = str.split(",");
 		TreeNode node = new TreeNode(Integer.parseInt(arr[0]));
-		for(int i=1;i<arr.length;i++)
-		{
-			Binary_tree_basic_functions.insert(node, Integer.parseInt(arr[i]));
+		for (int i = 1; i < arr.length; i++) {
+			if (arr[i].equals("null")) {
+				Binary_tree_basic_functions.insert(node,
+						"null");
+			} else {
+				Binary_tree_basic_functions.insert(node,
+						Integer.parseInt(arr[i]));
+			}
 		}
 		return node;
 	}
-	
+
 }

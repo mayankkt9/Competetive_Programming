@@ -19,6 +19,7 @@ public class Subset_sum_partition {
 					calc[i][j]=1;
 				else if(i==0)
 					calc[i][j]=0;
+				
 				else if(j<arr[i-1])
 					calc[i][j]=calc[i-1][j];
 				else
