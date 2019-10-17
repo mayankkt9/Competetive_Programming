@@ -12,21 +12,15 @@ public class Reorder_log_files {
 
 		String o1 = "Hi! My name is Mayank";
 		String y = "Hello";
-
-		// System.out.println(x.split(" ")[1]);
-
 		String logs[] = { "a1 9 2 3 1", "g1 act car", "zo4 4 7",
 				"ab1 off key dog", "a8 act zoo" };
-		String logs1[]={"a1 9 2 3 1","g1 act car","zo4 4 7","ab1 off key dog","a8 act zoo","a2 act car"};
-
-		// System.out.println(o1.substring(o1.indexOf(" ")+1));
-
+		String logs1[] = { "a1 9 2 3 1", "g1 act car", "zo4 4 7",
+				"ab1 off key dog", "a8 act zoo", "a2 act car" };
 		System.out.println(Arrays.toString(reorderLogFiles(logs1)));
 
 	}
 
 	public static String[] reorderLogFiles(String[] logs) {
-
 		Arrays.sort(logs, new comp());
 		return logs;
 	}
@@ -57,8 +51,7 @@ class comp implements Comparator<String> {
 		} else if (Character.isAlphabetic(spl2.charAt(0))
 				&& Character.isDigit(spl1.charAt(0))) {
 			return 1;
-		}
-		else
+		} else
 			return 0;
 	}
 
