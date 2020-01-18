@@ -20,6 +20,11 @@ public abstract class Person implements UserInfoItem {
 
 	abstract void addCourseList(List<Course> course);
 
+	abstract void gradeSolution(Solution sol);
+	
+	abstract void reportSolution(Solution sol);
+	
+
 	void showAddButtons() {
 		courseMenu.showAddButtons();
 	}

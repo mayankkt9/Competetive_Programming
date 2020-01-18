@@ -5,10 +5,7 @@ import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.util.Collections;
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.Set;
-
-import javax.swing.plaf.basic.BasicScrollPaneUI.HSBChangeListener;
 
 public class P4_Interactive {
 

@@ -1,5 +1,7 @@
 package leetcode;
 
+import architect.TreeNode;
+
 public class Max_Depth {
 	public static void main(String[] args) {
 

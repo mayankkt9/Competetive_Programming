@@ -108,4 +108,17 @@ public class Instructor extends Person {
 		this.courseList = courseList;
 	}
 
+	@Override
+	void gradeSolution(Solution sol) {
+		// TODO Auto-generated method stub
+		sol.setGrade("A");
+
+	}
+
+	@Override
+	void reportSolution(Solution sol) {
+		// TODO Auto-generated method stub
+		sol.setReport("Reported Flag set");
+	}
+
 }

@@ -48,13 +48,13 @@ class MainClass {
 		// Creating and Printing out Assignment
 		Assignment a1 = facade.addAssignemnt(instructorList.get(0), courseList
 				.getCourseList().get(0), "--Questions--", new SimpleDateFormat(
-				"dd/MM/yyyy").parse("25/10/2019"));
+				"dd/MM/yyyy").parse("10/11/2019"));
 		Assignment a2 = facade.addAssignemnt(instructorList.get(0), courseList
 				.getCourseList().get(0), "--Questions--", new SimpleDateFormat(
-				"dd/MM/yyyy").parse("24/10/2019"));
+				"dd/MM/yyyy").parse("05/11/2019"));
 		Assignment a3 = facade.addAssignemnt(instructorList.get(0), courseList
 				.getCourseList().get(1), "--Questions--", new SimpleDateFormat(
-				"dd/MM/yyyy").parse("23/10/2019"));
+				"dd/MM/yyyy").parse("08/11/2019"));
 		System.out.println("Assignment Created :");
 		System.out.println("ID\tCourse\tQuestion\tDueDate");
 		System.out.println(a1);
@@ -82,6 +82,8 @@ class MainClass {
 
 		// VISITOR PATTERN
 		// Login
+		// Logging in a user with name pepe and logging him, then showing all
+		// his courses and assignments due
 		Person pepe = new Student("pepe", "1111");
 		Person result_person = facade.login(pepe);
 		if (result_person == null)
@@ -89,6 +91,19 @@ class MainClass {
 		System.out.println("Login Successful");
 		System.out.println();
 		facade.accept(new ReminderVisitor());
+
+		// Submit Solution test
+		// 2 users submitting the solution for the assignment 1. pepe and yaya
+		// are submitting solution for CSE 870
+		Solution sol1 = new Solution(studentList.get(0),
+				"This is pepe's solution");
+		Solution sol2 = new Solution(studentList.get(1),
+				"This is yaya's solutions");
+
+		facade.submitSolution(a1, sol1);
+		facade.submitSolution(a1, sol2);
+		p2.gradeSolution(sol1);
+		p2.gradeSolution(sol2);
 
 	}
 }

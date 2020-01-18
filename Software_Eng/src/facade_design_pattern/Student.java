@@ -111,4 +111,19 @@ public class Student extends Person {
 
 	}
 
+	@Override
+	void gradeSolution(Solution sol) {
+		// TA Student or Grader Student can grade the solution, just a TA or
+		// grader check is required here before grading the solution
+		sol.setGrade("A");
+
+	}
+
+	@Override
+	void reportSolution(Solution sol) {
+		// TODO Auto-generated method stub
+		sol.setReport("Reported Flag Set");
+
+	}
+
 }

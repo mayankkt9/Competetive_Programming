@@ -1,17 +1,10 @@
 package sep_19_long_challenge;
 
-import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.io.OutputStreamWriter;
-import java.math.BigInteger;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.InputMismatchException;
-
-import sep_19_long_challenge.Print;
-import sep_19_long_challenge.Scan;
 
 public class P1 {
 

@@ -18,17 +18,20 @@ public class Facade {
 	UserCourseAssign userCourse = new UserCourseAssign();
 	ClassCourseList classCourseList = new ClassCourseList();
 
+	
+	
+	//Logging in user,
 	public Person login(Person person) {
 		// Login Successful Authentication
 		for (int i = 0; i < this.theStudentList.size(); i++) {
 			if (person.getUserId().equals(theStudentList.get(i).getUserId()))
 				this.thePerson = theStudentList.get(i);
-				return theStudentList.get(i);
+			return theStudentList.get(i);
 		}
 		for (int i = 0; i < this.theInstructorList.size(); i++) {
 			if (person.getUserId().equals(theInstructorList.get(i).getUserId()))
 				this.thePerson = theInstructorList.get(i);
-				return theInstructorList.get(i);
+			return theInstructorList.get(i);
 		}
 		return null;
 	}
@@ -95,6 +98,18 @@ public class Facade {
 		classCourseList.setCourseList(courseList.createCourseList());
 
 		return classCourseList;
+	}
+
+	public void submitSolution(Assignment assignment, Solution sol) {
+		assignment.addSolution(sol);
+	}
+
+	public void gradeSolution(Person person, Solution sol) {
+		person.gradeSolution(sol);
+	}
+
+	public void reportSolutions() {
+
 	}
 
 	public void attachCourseToUser(List<Course> courseList,

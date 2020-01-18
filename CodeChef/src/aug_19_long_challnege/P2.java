@@ -2,11 +2,8 @@ package aug_19_long_challnege;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.math.BigInteger;
-import java.util.InputMismatchException;
 
 public class P2 {
 	public static void main(String[] args) throws IOException {

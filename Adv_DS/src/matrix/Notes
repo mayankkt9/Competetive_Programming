@@ -1,0 +1,26 @@
+
+Question and its USP
+
+Geeksforgeeks and Leetcode
+
+Maximum XOR value in matrix - (One Traversal method)
+Find row number of a binary matrix having maximum number of 1s - (O(n+m))
+
+Good Path Problem
+Find the longest path in a matrix with given constraints
+Find length of the longest consecutive path from a given starting character
+
+
+
+Good DP questions
+Minimum Initial Points to Reach Destination |  LC 174 Dungeon Game
+
+Number of paths with exactly k coins
+https://www.geeksforgeeks.org/given-n-x-n-square-matrix-find-sum-sub-squares-size-k-x-k/
+
+MISC TODO
+https://leetcode.com/problems/swim-in-rising-water/
+https://leetcode.com/problems/trapping-rain-water-ii/
+Given a binary matrix of 0 and 1 where we can move in 4 directions left, right, top, down and 
+we can only pass through 1's. Find the shortest path from given source coordinate (a,b) to
+destination (m,n) given we can flip any one of the zero to one.

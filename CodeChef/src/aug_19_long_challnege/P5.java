@@ -5,10 +5,7 @@ import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.LinkedList;
 import java.util.List;
-
-import sun.applet.Main;
 
 public class P5 {
 	public static void main(String[] args) throws IOException {
