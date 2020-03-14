@@ -6,3 +6,13 @@ It is very obvious that a tree problem is likely to be solved by recursion. The 
 passing info downwards -- by arguments
 passing info upwards -- by return value
 
+
+
+Traversal Questions
+Vertical Order Traversal
+
+Preorder Questions
+Validate BST
+
+Postorder Questions
+Largest BST in Btree (Very Nice postorder question, Good base)
