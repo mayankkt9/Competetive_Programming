@@ -10,9 +10,19 @@ passing info upwards -- by return value
 
 Traversal Questions
 Vertical Order Traversal
+Boundary traversal (Nice question)
 
 Preorder Questions
-Validate BST
+Validate BST (Sending data downwards)
 
 Postorder Questions
-Largest BST in Btree (Very Nice postorder question, Good base)
+Largest BST in Btree (Very Nice postorder question, Good base, Sending data upwards)
+
+Height Traversal Question (Traveling from root to bottom)
+Inorder Successor
+
+
+Follow this order for some questions
+Sorted Array to BST
+Unique Binary Search tree ii
+
