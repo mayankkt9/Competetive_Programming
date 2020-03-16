@@ -11,6 +11,11 @@ passing info downwards -- by arguments
 passing info upwards -- by return value
 
 
+Problem solving in trees is all about what do you need to send down or up, to come up with a solution for this approach.
+
+
+
+
 
 Traversal Questions
 Vertical Order Traversal
