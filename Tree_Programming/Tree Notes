@@ -1,3 +1,7 @@
+Inputs
+[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+
+
 Tree Notes 
 
 
@@ -26,3 +30,9 @@ Follow this order for some questions
 Sorted Array to BST 
 Unique Binary Search tree ii (Still needs practice)
 
+
+Same question or learning
+
+This question helped me understand this concept - If I want to partition the tree removing one edge, and calculate all possible sum of two trees - We just need to know how to calculate all subtree sum. 
+Maximum Product of Splitted Binary Tree
+Equal Tree Partition
