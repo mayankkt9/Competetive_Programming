@@ -1,0 +1,32 @@
+
+
+Lambda Expression - Basically an anonymous function
+
+public int square(int n){
+	return n*n;
+}
+can be converted to 
+n->n*n; 
+(For only one line in method body curly braces are not required)
+(return keyword not required)
+
+
+Functional Interface (Only one abstract method and multiple default or static methods are possible)
+Example Runnable -> run()
+Example ActionListener -> actionPerformed()
+
+interface Interf{
+	public void m1();
+}
+class A implements Interf{
+	public void m1(){
+		Sysout("Hi")
+	}
+}
+
+Instead of creating new class to implement body of m1, we can write lambda expression
+As functional interface has only one abstract method so it know which implementation method it is.
+main(){
+	Interf i = ()->Sysout("Hi"); 
+	i.m1();
+}
