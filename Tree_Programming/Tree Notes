@@ -53,6 +53,9 @@ Iterative Traversal Done
 Nice Approach
 Distribute Coins in Binary Tree
 
+Some Programs that sends some value up and calculate other value up, and are nice in approach
+Distribute Coins in Binary Tree
+
 Same question or learning
 
 This question helped me understand this concept - If I want to partition the tree removing one edge, and calculate all possible sum of two trees - We just need to know how to calculate all subtree sum. 
