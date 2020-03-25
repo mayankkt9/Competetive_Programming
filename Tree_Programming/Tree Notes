@@ -70,9 +70,14 @@ Equal Tree Partition
 
 Utility Class to make for Tree
 Iterative BFS
+Iterative DFS PostOrder
+Iterative DFS PreOrder
+Iterative DFS InOrder
 
 Recursive BFS
 Recursive DFS PostOrder
 Recursive DFS PreOrder
 Recursive DFS InOrder
+
+
 UnionFind
