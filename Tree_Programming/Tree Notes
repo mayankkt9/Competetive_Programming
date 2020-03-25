@@ -68,4 +68,11 @@ This question helped me understand this concept - If I want to partition the tre
 Maximum Product of Splitted Binary Tree
 Equal Tree Partition
 
+Utility Class to make for Tree
+Iterative BFS
+
+Recursive BFS
+Recursive DFS PostOrder
+Recursive DFS PreOrder
+Recursive DFS InOrder
 UnionFind
