@@ -79,5 +79,10 @@ Recursive DFS PostOrder
 Recursive DFS PreOrder
 Recursive DFS InOrder
 
+Construct Binary Tree from Preorder and Postorder
+Construct Binary Tree from Preorder and Inorder
+Construct Binary Tree from Inorder and Postorder
+Construct BST from Sorted Array
+
 
 UnionFind
