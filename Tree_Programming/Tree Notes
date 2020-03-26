@@ -16,7 +16,8 @@ Problem solving in trees (Majority of the problems can be solved using this appr
   - If you chose BFS, then you are good to go, and this area is not complicated
   - If you choose PreOrder or PostOrder, this is all about what do you need to send down or up, to come up with a solution for this approach.
 Sometimes having parent pointer makes your approach easy, does incur space cost. Do think about it 
-
+Sometimes think of reverse postorder,inorder,preorder.
+Reverse PostOrder (Helped in Flattening)
 
 
 
