@@ -20,3 +20,4 @@ Good Approach Question | Come to Revise Later
 LC 406. Queue Reconstruction by Height
 484. Find Permutation (Nice approach, I did came up with solution but with a long code)
 1247. Minimum Swaps to Make Strings Equal (Came up with the logic nearly)
+1055. Shortest Way to Form String (This question has a nice data structure to check if a character exist in part of substring in O(1))
