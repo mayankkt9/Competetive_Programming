@@ -10,14 +10,58 @@ class RemoveInvalidParentheses {
     public List<String> removeInvalidParentheses(String s) {
 
         System.out.println("Hello");
+        int paren[] = calculateParenthesis(s);
         // dfs_1(s, 0, 0);
         // dfs_2(s, 0, 0, 0, 0);
         // dfs_3(s, 0, 0, new StringBuilder());
-        dfs_4(s, 0, 0, new StringBuilder(), 0, 0);
+        // dfs_4(s, 0, 0, new StringBuilder(), 0, 0);
+        dfs_5(s, 0, 0, new StringBuilder(), 0, 0, paren[0], paren[1]);
         Set<String> set = new HashSet<>(answer);
         List<String> list = new ArrayList<>(set);
         System.out.println(list);
         return null;
+    }
+
+    public void dfs_5(String str, int idx, int rem, StringBuilder cur_str, int left, int right, int leftrem,
+            int rightrem) {
+
+        if (idx == str.length()) {
+            if (valid(cur_str.toString())) {
+                if (rem == min) {
+                    answer.add(cur_str.toString());
+                } else if (rem < min) {
+                    answer.clear();
+                    answer.add(cur_str.toString());
+                    min = rem;
+                }
+            }
+        } else {
+            char ch = str.charAt(idx);
+            if (ch == '(' || ch == ')') {
+
+                if (ch == '(') {
+                    if (leftrem > 0)
+                        dfs_5(str, idx + 1, rem + 1, cur_str, left, right, leftrem - 1, rightrem);
+                    cur_str.append(ch);
+                    dfs_5(str, idx + 1, rem, cur_str, left + 1, right, leftrem, rightrem);
+                    cur_str.deleteCharAt(cur_str.length() - 1);
+                } else {
+                    if (rightrem > 0)
+                        dfs_5(str, idx + 1, rem + 1, cur_str, left, right, leftrem, rightrem - 1);
+                    if (left > right) {
+                        cur_str.append(ch);
+                        dfs_5(str, idx + 1, rem, cur_str, left, right + 1, leftrem, rightrem);
+                        cur_str.deleteCharAt(cur_str.length() - 1);
+                    }
+                }
+            } else {
+                cur_str.append(ch);
+                dfs_4(str, idx + 1, rem, cur_str, left, right);
+                cur_str.deleteCharAt(cur_str.length() - 1);
+            }
+
+        }
+
     }
 
     public void dfs_4(String str, int idx, int rem, StringBuilder cur_str, int left, int right) {
@@ -132,6 +176,36 @@ class RemoveInvalidParentheses {
             return true;
         else
             return false;
+    }
+
+    public int[] calculateParenthesis(String s) {
+
+        int c = 0;
+        int rightParen = 0;
+        int leftParen = 0;
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) == '(')
+                c++;
+            else if (s.charAt(i) == ')')
+                c--;
+            if (c < 0) {
+                c = 0;
+                rightParen++;
+            }
+        }
+        c = 0;
+        for (int i = s.length() - 1; i >= 0; i--) {
+            if (s.charAt(i) == ')')
+                c++;
+            else if (s.charAt(i) == '(')
+                c--;
+            if (c < 0) {
+                c = 0;
+                leftParen++;
+            }
+        }
+        System.out.println(leftParen + " " + rightParen);
+        return new int[] { leftParen, rightParen };
     }
 
     public static void main(String[] args) {

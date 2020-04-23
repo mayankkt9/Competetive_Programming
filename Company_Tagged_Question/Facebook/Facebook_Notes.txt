@@ -10,8 +10,10 @@ Approach
     function arguement, as and when we are done building we are backtracking the chracter appended to get more solutions.
     3) - DFS + Backtracking, Just the difference between approach 2 and 3 is in three we are only appending right parenthesis when right parenthesis
     count is less than left parenthesis count. This makes a lot difference in runtime.
-    4) - DFS + Backtracking, We will first count minimum number of left parenthesis or right parenthesis to remove, and then recurse that many addition
-    or deletion of parenthesis
+    4) - DFS + Backtracking, We will first count minimum number of left parenthesis or right parenthesis to remove, and then recurse that many 
+    deletion of parenthesis and not randomly deleting each parenthesis.
+
 Approach 1) 540 ms
 Approach 2) 310 ms
 Approach 3) 130 ms
+Approach 4) 56 ms
