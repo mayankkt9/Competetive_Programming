@@ -3,8 +3,15 @@ Question 4)
 Remove Invalid Parenthesis
     - Too Much to learn, because there can be many different approach for this Questiion
 Approach
-    - DFS - Recursion, you always have two option to either take that parenthesis into consideration or delete that parenthesis from final 
+    1) - DFS - Recursion, you always have two option to either take that parenthesis into consideration or delete that parenthesis from final 
     solution consideration, at the end when you recursed the whole string with the above two option just check if the string that is produced 
     is valid or not. keep count of the number of characters removed, because you have to find minimum character removed.
-    - DFS + Bactracking, Same procedure as above, just that we are building the string and sending it to recursion tree down the tree through 
+    2) - DFS + Bactracking, Same procedure as above, just that we are building the string and sending it to recursion tree down the tree through 
     function arguement, as and when we are done building we are backtracking the chracter appended to get more solutions.
+    3) - DFS + Backtracking, Just the difference between approach 2 and 3 is in three we are only appending right parenthesis when right parenthesis
+    count is less than left parenthesis count. This makes a lot difference in runtime.
+    4) - DFS + Backtracking, We will first count minimum number of left parenthesis or right parenthesis to remove, and then recurse that many addition
+    or deletion of parenthesis
+Approach 1) 540 ms
+Approach 2) 310 ms
+Approach 3) 130 ms
