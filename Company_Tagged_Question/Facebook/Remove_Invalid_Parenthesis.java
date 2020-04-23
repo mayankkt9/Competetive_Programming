@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 import java.util.Set;
 
 class RemoveInvalidParentheses {
@@ -15,11 +17,46 @@ class RemoveInvalidParentheses {
         // dfs_2(s, 0, 0, 0, 0);
         // dfs_3(s, 0, 0, new StringBuilder());
         // dfs_4(s, 0, 0, new StringBuilder(), 0, 0);
-        dfs_5(s, 0, 0, new StringBuilder(), 0, 0, paren[0], paren[1]);
+        // dfs_5(s, 0, 0, new StringBuilder(), 0, 0, paren[0], paren[1]);
+        bfs(s);
         Set<String> set = new HashSet<>(answer);
         List<String> list = new ArrayList<>(set);
         System.out.println(list);
         return null;
+    }
+
+    public void bfs(String str) {
+
+        Queue<String> q = new LinkedList<>();
+        q.add(str);
+        HashSet<String> visited = new HashSet<>();
+        visited.add(str);
+        boolean found = false;
+        while (!q.isEmpty()) {
+            int n = q.size();
+            if (found) {
+                n = 0;
+                break;
+            }
+            for (int i = 1; i <= n; i++) {
+                String temp = q.poll();
+                if (valid(temp)) {
+                    answer.add(temp);
+                    found = true;
+                }
+                for (int j = 0; j < temp.length(); j++) {
+                    if (Character.isLetter(temp.charAt(j)))
+                        continue;
+                    String form = temp.substring(0, j) + temp.substring(j + 1);
+                    if (!visited.contains(form)){
+                        q.add(form);
+                        visited.add(form);
+                    }
+                }
+            }
+
+        }
+
     }
 
     public void dfs_5(String str, int idx, int rem, StringBuilder cur_str, int left, int right, int leftrem,
@@ -204,12 +241,12 @@ class RemoveInvalidParentheses {
                 leftParen++;
             }
         }
-        System.out.println(leftParen + " " + rightParen);
+        // System.out.println(leftParen + " " + rightParen);
         return new int[] { leftParen, rightParen };
     }
 
     public static void main(String[] args) {
         RemoveInvalidParentheses obj = new RemoveInvalidParentheses();
-        obj.removeInvalidParentheses("(a)())()");
+        obj.removeInvalidParentheses("()(((((((()");
     }
 }
